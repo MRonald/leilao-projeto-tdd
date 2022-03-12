@@ -1,3 +1,9 @@
+Leilao (Alura\Leilao\Tests\Model\Leilao)
+ [x] Leilao nao deve receber mais de cinco lances do mesmo usuario
+ [x] Leilao nao deve receber lances repetidos
+ [x] Leilao deve receber lances with data set "leilao-com-um-lance"
+ [x] Leilao deve receber lances with data set "leilao-com-dois-lances"
+
 Avaliador (Alura\Leilao\Tests\Service\Avaliador)
  [x] Avaliador deve encontrar o maior valor de lances with data set "ordem-crescente"
  [x] Avaliador deve encontrar o maior valor de lances with data set "ordem-decrescente"
