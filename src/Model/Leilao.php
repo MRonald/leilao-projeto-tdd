@@ -7,11 +7,13 @@ class Leilao
     /** @var Lance[] */
     private array $lances;
     private string $descricao;
+    private bool $finalizado;
 
     public function __construct(string $descricao)
     {
         $this->descricao = $descricao;
         $this->lances = [];
+        $this->finalizado = false;
     }
 
     public function recebeLance(Lance $lance): void
@@ -36,6 +38,11 @@ class Leilao
         return $this->lances;
     }
 
+    public function finaliza()
+    {
+        $this->finalizado = true;
+    }
+
     private function ehDoUltimoUsuario(Usuario $usuario): bool
     {
         $ultimoLance = $this->lances[array_key_last($this->lances)];
@@ -57,5 +64,10 @@ class Leilao
         );
 
         return $totalLancesUsuario;
+    }
+
+    public function estaFinalizado()
+    {
+        return $this->finalizado;
     }
 }
